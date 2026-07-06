@@ -1,0 +1,105 @@
+.navbar {
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.navbar-bg {
+    background: #000;
+    color: white;
+    border-bottom-color: #333;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.navbar .nav-menu {
+    display: flex;
+}
+
+.navbar li {
+    padding: 1rem;
+}
+
+.navbar li a {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Source Serif 4', serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.navbar li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.navbar li a:hover::after,
+.navbar li a.active-link::after {
+    width: 100%;
+}
+
+.navbar li a.active-link {
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.nav-menu.active li a {
+    color: #f8f8f8;
+    font-size: 2rem;
+}
+
+.nav-menu.active li a:hover {
+    color: darksalmon;
+    transform: scale(1.1);
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+@media screen and (max-width: 740px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.92);
+        transition: left 0.4s ease;
+    }
+
+    .navbar .nav-menu.active {
+        left: 0;
+    }
+}

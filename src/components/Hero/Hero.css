@@ -1,0 +1,57 @@
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url('../../assets/hero-roll.png') no-repeat center center/cover;
+}
+
+.hero .container{
+    max-width: 1240px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.hero p{
+    font-size: 1.8rem;
+    color: #f5f2ec;
+}
+
+.hero span{
+    color: #f5f2ec;
+}
+
+.hero .content{
+    border-left: 10px solid #f5f2ec;
+    padding-left: 2.5rem;
+    margin-bottom: 5%;
+    animation: hero-fade-in 1s ease-out;
+}
+
+.hero .btn{
+    margin: 1rem 1rem 1rem 0;
+    width: 200px;
+    font-weight: bold;
+    color: #f5f2ec;
+    border-color: #f5f2ec;
+    transition: background-color .3s ease, color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+
+.hero .btn:hover{
+    background-color: #f5f2ec;
+    color: #111;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .45);
+}
+
+@keyframes hero-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

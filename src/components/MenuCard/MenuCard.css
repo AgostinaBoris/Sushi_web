@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
+
+.akari-menu-wrap {
+  --akari-bg: #080604;
+  --akari-paper: #120d0a;
+  --akari-ink: #f8f3ed;
+  --akari-muted: #c9beb5;
+  --akari-soft: #8d7f74;
+  --akari-accent: #9f3434;
+  --akari-accent-soft: rgba(159, 52, 52, .55);
+  --akari-gold: #d8a45d;
+
+  color: var(--akari-ink);
+  font-family: "Inter", system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(255,255,255,.08), transparent 24%),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.025) 1px, transparent 1px),
+    repeating-linear-gradient(90deg, #0c0806 0 18px, #140d09 18px 36px, #090604 36px 54px);
+  background-size: auto, 72px 72px, 72px 72px, auto;
+  padding: 28px;
+}
+
+.akari-menu-wrap * {
+  box-sizing: border-box;
+}
+
+.akari-menu {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding: 44px;
+  border: 1px solid var(--akari-accent-soft);
+  background:
+    linear-gradient(rgba(255,255,255,.018), rgba(0,0,0,.25)),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 17px),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.015) 0 1px, transparent 1px 23px),
+    linear-gradient(90deg, #100b08, #22140f 48%, #0b0705);
+  box-shadow: 0 28px 80px rgba(0,0,0,.6), inset 0 0 0 10px rgba(0,0,0,.22);
+}
+
+.akari-menu::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: 18px;
+  border: 1px solid rgba(159, 52, 52, .5);
+}
+
+.akari-menu .brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 38px;
+  position: relative;
+  z-index: 1;
+}
+
+.akari-menu .brand h1 {
+  margin: 0;
+  font-family: "Amatic SC", cursive;
+  font-size: clamp(56px, 8vw, 88px);
+  line-height: .9;
+  letter-spacing: .05em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.akari-menu .brand p {
+  margin: 8px 0 0;
+  color: var(--akari-muted);
+  font-size: 13px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.akari-menu .mark {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.18);
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,.22), transparent 28%), linear-gradient(140deg, #2d0e0e, #080504);
+  color: #fff;
+  font-family: "Amatic SC", cursive;
+  font-size: 44px;
+  box-shadow: 0 12px 38px rgba(0,0,0,.5);
+}
+
+.akari-menu .grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 44px;
+}
+
+.akari-menu .left { display: flex; flex-direction: column; gap: 34px; }
+
+.akari-menu .hero-card {
+  position: relative;
+  transform: rotate(-12deg);
+  margin: 12px 0 18px;
+  width: 82%;
+  min-height: 150px;
+  padding: 14px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #cba06f, #efd9b2 42%, #b47a42);
+  box-shadow: 0 18px 34px rgba(0,0,0,.45);
+}
+
+.akari-menu .hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 8% 50%, #111 0 10px, transparent 11px),
+    radial-gradient(circle at 22% 50%, #fff 0 12px, #f2ccbf 13px 19px, transparent 20px),
+    radial-gradient(circle at 38% 50%, #e84b4b 0 10px, #fff 11px 18px, transparent 19px),
+    radial-gradient(circle at 54% 50%, #f2b38b 0 11px, #fff 12px 19px, transparent 20px),
+    radial-gradient(circle at 70% 50%, #e6d7a6 0 10px, #fff 11px 18px, transparent 19px),
+    radial-gradient(circle at 86% 50%, #c73342 0 9px, #fff 10px 16px, transparent 17px);
+  opacity: .95;
+}
+
+.akari-menu .hero-card span {
+  position: absolute;
+  right: 18px;
+  bottom: 10px;
+  transform: rotate(12deg);
+  font-family: "Amatic SC", cursive;
+  color: #fff;
+  font-size: 28px;
+  text-shadow: 0 2px 12px rgba(0,0,0,.8);
+  white-space: nowrap;
+}
+
+.akari-menu .photo {
+  min-height: 260px;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 18px 38px rgba(0,0,0,.48);
+  background:
+    radial-gradient(circle at 32% 38%, #f05c32 0 8%, transparent 9%),
+    radial-gradient(circle at 41% 43%, #ff915b 0 7%, transparent 8%),
+    radial-gradient(circle at 50% 40%, #f06c45 0 8%, transparent 9%),
+    radial-gradient(circle at 60% 42%, #fbceb6 0 7%, transparent 8%),
+    radial-gradient(circle at 69% 38%, #fffbf4 0 6%, transparent 7%),
+    radial-gradient(circle at 48% 47%, rgba(255,255,255,.42), transparent 28%),
+    radial-gradient(circle at 52% 48%, #303a44 0 38%, #0d1115 39% 42%, transparent 43%),
+    linear-gradient(140deg, #52351f, #0b0705);
+}
+
+.akari-menu .photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, rgba(255,255,255,.12), transparent 35%), radial-gradient(circle at 42% 20%, #7cc06a 0 12px, transparent 13px);
+}
+
+.akari-menu .caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  color: var(--akari-ink);
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.akari-menu .caption span {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.akari-menu .section { margin-top: 8px; }
+
+.akari-menu .section-title {
+  font-family: "Amatic SC", cursive;
+  font-size: clamp(54px, 8vw, 74px);
+  line-height: .9;
+  margin: 0 0 22px;
+  font-weight: 400;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+.akari-menu .list { width: 100%; border-collapse: collapse; }
+.akari-menu .list th { color: var(--akari-muted); font-weight: 500; font-size: 11px; padding-bottom: 8px; text-align: right; }
+.akari-menu .list td { padding: 7px 0; vertical-align: top; font-size: 16px; }
+.akari-menu .list td:first-child { font-weight: 600; letter-spacing: -.02em; }
+.akari-menu .list td:not(:first-child) { width: 58px; text-align: right; color: var(--akari-muted); }
+
+.akari-menu .sub { display: block; color: var(--akari-soft); font-size: 11px; line-height: 1.2; font-weight: 400; margin-top: 2px; }
+
+.akari-menu .sushi-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px; margin-bottom: 20px; }
+.akari-menu .sushi-header .section-title { margin: 0; }
+.akari-menu .price-label { color: var(--akari-muted); font-size: 12px; letter-spacing: .1em; }
+.akari-menu .sushi-list { display: flex; flex-direction: column; gap: 11px; }
+
+.akari-menu .sushi-item {
+  display: grid;
+  grid-template-columns: 1fr 44px 44px;
+  align-items: center;
+  gap: 18px;
+  min-height: 51px;
+  border-bottom: 1px solid rgba(255,255,255,.045);
+  padding-bottom: 9px;
+}
+
+.akari-menu .sushi-item h3 {
+  margin: 0;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: .9;
+  letter-spacing: .01em;
+  text-transform: none;
+}
+
+.akari-menu .sushi-item small { font-size: 17px; font-weight: 400; color: var(--akari-muted); }
+
+.akari-menu .sushi-piece {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255,255,255,.55), transparent 42%),
+    radial-gradient(circle, var(--fish, #e95550) 0 32%, #fdf8f0 33% 76%, #201c16 77% 100%);
+  box-shadow: 0 6px 14px rgba(0,0,0,.4);
+}
+
+.akari-menu .price { text-align: right; color: var(--akari-muted); font-size: 15px; font-weight: 500; }
+.akari-menu .fusion { margin-top: 22px; max-width: 420px; }
+
+.akari-menu .footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(159,52,52,.35);
+  color: var(--akari-soft);
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.akari-menu .footer span {
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 820px) {
+  .akari-menu-wrap { padding: 14px; }
+  .akari-menu { padding: 30px 24px; }
+  .akari-menu .grid { grid-template-columns: 1fr; }
+  .akari-menu .hero-card { width: 92%; }
+  .akari-menu .sushi-item { grid-template-columns: 1fr 36px 42px; }
+  .akari-menu .brand { align-items: flex-start; }
+  .akari-menu .mark { width: 66px; height: 66px; font-size: 34px; }
+}
+
+@media print {
+  .akari-menu-wrap { padding: 0; background: #080604; }
+  .akari-menu { box-shadow: none; width: 100%; }
+}

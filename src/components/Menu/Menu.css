@@ -1,0 +1,25 @@
+.menu {
+  width: 100%;
+  padding: 6rem 0 3rem;
+}
+
+.menu .container {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu span {
+  font-size: 5rem;
+  text-align: center;
+  font-family: monospace;
+  margin: auto;
+}
+
+.menu .text {
+  border-left: 10px solid #000;
+  padding: 2rem;
+  margin: 2rem;
+}
