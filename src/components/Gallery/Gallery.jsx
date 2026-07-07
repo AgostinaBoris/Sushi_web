@@ -55,10 +55,6 @@ export const Gallery = (props) => {
 
             <div className="stats">
               <div className="stat">
-                <strong>{images.length}</strong>
-                <span>Images</span>
-              </div>
-              <div className="stat">
                 <strong>Fresh</strong>
                 <span>Sushi</span>
               </div>
